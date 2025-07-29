@@ -86,7 +86,6 @@ function SignIn(props) {
               onClick={(e) => handleSubmit(e)}
               className="mybutton button_fullcolor"
             >
-              {console.log("sign_in  willliamTeste  ", lang)}
               {translate({ lang: lang, info: "sign_in" })}
             </Button>
           </Col>

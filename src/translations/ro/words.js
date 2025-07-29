@@ -343,6 +343,8 @@ var word_bank = {
   theme_toggle: "Comută tema",
   theme_blue: "Tema albastră",
   theme_yellow: "Tema galbenă",
+  theme_red_light: "Temă roșie deschisă",
+  theme_red_dark: "Temă roșie închisă",
   //401
   page_not_found_text:
     "Ne pare rău, pagina pe care o căutați nu există. Este posibil să fi fost mutată sau ștearsă, sau ați introdus URL-ul incorect.",

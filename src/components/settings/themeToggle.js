@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import { Dropdown, Button } from "react-bootstrap";
 import { translate } from "../../translations/translate";
 // import { Button } from "bootstrap";
@@ -14,6 +14,8 @@ function ThemeToggle(props) {
   const theme_array = [
     { id: "blue", text: translate({ lang: lang, info: "theme_blue" }) },
     { id: "yellow", text: translate({ lang: lang, info: "theme_yellow" }) },
+    { id: "red_light", text: translate({ lang: lang, info: "theme_red_light" }) },
+    { id: "red_dark", text: translate({ lang: lang, info: "theme_red_dark" }) },
   ];
   const theme = useSelector((state) => state.theme.currentTheme);
   const dispatch = useDispatch();

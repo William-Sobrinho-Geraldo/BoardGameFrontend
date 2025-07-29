@@ -344,6 +344,8 @@ var word_bank = {
   theme_toggle: "Alternar tema",
   theme_blue: "Tema azul",
   theme_yellow: "Tema amarelo",
+  theme_red_light: "Tema vermelho claro",
+  theme_red_dark: "Tema vermelho escuro",
   //401
   page_not_found_text:
     "Desculpe, a página que você está procurando não existe. Pode ter sido movida ou excluída, ou você pode ter digitado o URL incorretamente.",

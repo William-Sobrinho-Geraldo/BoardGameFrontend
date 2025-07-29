@@ -2,11 +2,28 @@ import React, { useState, useEffect } from "react";
 import { translate } from "../../translations/translate";
 import logo_icon from "../../img/logo.png";
 import logo_blue from "../../img/logo_blue.png";
+import logo_red_light from "../../img/logo_red_light.png";
+import logo_red_dark from "../../img/logo_red_dark.png";
 import { capitalizeFirstLetter, isEmpty } from "../../utils/utils";
 import { checkEaster, checkOccasion } from "../../utils/special_occasions";
 import EasterEgg from "./special_occasions/easter/egg";
 import Ghost from "./special_occasions/halloween/ghost";
 import { useSelector } from "react-redux";
+
+function getThemeLogo(currentTheme) {
+  switch (currentTheme) {
+    case "blue":
+      return logo_blue;
+    case "yellow":
+      return logo_icon;
+    case "red_light":
+      return logo_red_light; // Use logo_red_light as default for red_light, can be changed if specific logo exists
+    case "red_dark":
+      return logo_red_dark; // Use logo_red_dark as default for red_dark, can be changed if specific logo exists
+    default:
+      return logo_icon;
+  }
+}
 
 function Header(props) {
   const { lang, template, details } = props;
@@ -48,7 +65,7 @@ function Header(props) {
                     key={currentTheme}
                     id="logo_icon"
                     alt="logo_icon"
-                    src={currentTheme === "blue" ? logo_blue : logo_icon}
+                    src={getThemeLogo(currentTheme)}
                   />
                   <h1>{title}</h1>
                   <h3>{translate({ lang: lang, info: "salon_subtitle" })}</h3>
@@ -152,7 +169,7 @@ function Header(props) {
                     key={currentTheme}
                     id="logo_icon"
                     alt="logo_icon"
-                    src={currentTheme === "blue" ? logo_blue : logo_icon}
+                    src={getThemeLogo(currentTheme)}
                   />
                   <h1>{title}</h1>
                   <h3>{translate({ lang: lang, info: "subtitle" })}</h3>

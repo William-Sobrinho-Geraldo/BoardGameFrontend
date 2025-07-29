@@ -335,6 +335,8 @@ var word_bank = {
   theme_toggle: "切换主题",
   theme_blue: "蓝色主题",
   theme_yellow: "黄色主题",
+  theme_red_light: "浅红色主题",
+  theme_red_dark: "深红色主题",
   //401
   page_not_found_text:
     "抱歉，您查找的页面不存在。可能已移动或删除，或者您输入了错误的网址。",
