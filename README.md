@@ -4,9 +4,6 @@ A full-featured board gaming application built using **Node.js/Express** for the
 
 ### 🎲 Available Games
 
-https://github.com/user-attachments/assets/694bad4c-66ec-4a24-905d-6a1e474a18ff
-
-
 - Roulette  
 - Blackjack  
 - Slot Machines  
@@ -23,6 +20,8 @@ https://github.com/user-attachments/assets/694bad4c-66ec-4a24-905d-6a1e474a18ff
 Add a "Change Theme" button positioned at the top right corner of the sign-in interface.\
 Ensure that clicking the button toggles between themes seamlessly.\
 The theme switch should dynamically update the background, border, and text colors.
-        
+
+https://github.com/user-attachments/assets/694bad4c-66ec-4a24-905d-6a1e474a18ff
+
 ### 2. Wallet Integration
 Implement wallet connection functionality that is triggered when the user clicks the 'Sign-In' button.
