@@ -38,7 +38,7 @@ function Theme(props) {
           className="mybutton button_fullcolor"
           onClick={toggleDropdown}
         >
-          Selecionar Tema
+          {translate({ lang: lang, info: title })}
         </Dropdown.Toggle>
 
         <Dropdown.Menu>
