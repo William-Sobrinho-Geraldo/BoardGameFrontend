@@ -3,6 +3,10 @@
 A full-featured board gaming application built using **Node.js/Express** for the backend, **React.js/Redux** for the frontend, and **HTML Canvas** for rendering game graphics.
 
 ### 🎲 Available Games
+
+https://github.com/user-attachments/assets/694bad4c-66ec-4a24-905d-6a1e474a18ff
+
+
 - Roulette  
 - Blackjack  
 - Slot Machines  
