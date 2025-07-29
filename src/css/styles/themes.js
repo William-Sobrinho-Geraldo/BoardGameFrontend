@@ -1,0 +1,36 @@
+// src/styles/themes.js
+
+export const themes = {
+  yellow: {
+    "--bg": "black",
+    "--color": "gold",
+    "--dark_color": "#b39800",
+    "--light_color": "yellow",
+    "--green": "green",
+    "--darkgreen": "darkgreen",
+    "--green_transparent_3": "rgba(0, 128, 0, 0.3)",
+    "--red": "red",
+    "--darkred": "darkred",
+    "--red_transparent_3": "rgba(255, 0, 0, 0.3)",
+    "--orange": "orange",
+    "--transparent_color_1": "rgba(255, 215, 0, 0.1)",
+    "--transparent_color": "rgba(255, 215, 0, 0.2)",
+    "--firework_color": "red",
+  },
+  blue: {
+    "--bg": "#001f3f",
+    "--color": "#00aced",
+    "--dark_color": "#0074d9",
+    "--light_color": "#7fdbff",
+    "--green": "#2ecc40",
+    "--darkgreen": "#228b22",
+    "--green_transparent_3": "rgba(46, 204, 64, 0.3)",
+    "--red": "#ff4136",
+    "--darkred": "#c00",
+    "--red_transparent_3": "rgba(255, 65, 54, 0.3)",
+    "--orange": "#ff851b",
+    "--transparent_color_1": "rgba(0, 172, 237, 0.1)",
+    "--transparent_color": "rgba(0, 172, 237, 0.2)",
+    "--firework_color": "#00aced",
+  },
+};

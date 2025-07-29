@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Dropdown, Button } from "react-bootstrap";
 import { translate } from "../../translations/translate";
 // import { Button } from "bootstrap";
+import { applyTheme } from "../../utils/themeManager"; // Adjust the import path as necessary
 
 function Theme(props) {
   const { title, lang } = props;
@@ -15,15 +16,9 @@ function Theme(props) {
 
   function handleSelect(selectedTheme) {
     console.log("Tema selecionado:", selectedTheme);
-    // Aqui você pode adicionar a lógica para mudar o tema
-    // Por exemplo, salvar no localStorage ou dispatch para o Redux
     localStorage.setItem("selected_theme", selectedTheme);
-
-    // Fechar o dropdown após selecionar
     setIsOpen(false);
-
-    // Se estiver usando Redux, você pode fazer:
-    // dispatch(changeTheme(selectedTheme));
+    applyTheme(selectedTheme);
   }
 
   const toggleDropdown = () => {
@@ -47,7 +42,7 @@ function Theme(props) {
               <Dropdown.Item
                 key={i}
                 eventKey={item.id}
-                onClick={() => handleSelect(item.text)}
+                onClick={() => handleSelect(item.id)}
               >
                 <span>{item.text}</span>
               </Dropdown.Item>
