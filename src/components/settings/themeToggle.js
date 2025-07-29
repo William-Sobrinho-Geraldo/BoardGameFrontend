@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Dropdown, Button } from "react-bootstrap";
 import { translate } from "../../translations/translate";
 // import { Button } from "bootstrap";
 import { applyTheme } from "../../utils/themeManager"; // Adjust the import path as necessary
+import { useDispatch, useSelector } from "react-redux";
+import { setTheme } from "../../reducers/theme"; // ajuste o path conforme necessário
 
 function Theme(props) {
   const { title, lang } = props;
@@ -13,12 +15,14 @@ function Theme(props) {
     { id: "blue", text: translate({ lang: lang, info: "theme_blue" }) },
     { id: "yellow", text: translate({ lang: lang, info: "theme_yellow" }) },
   ];
+  const theme = useSelector((state) => state.theme.currentTheme);
+  const dispatch = useDispatch();
 
   function handleSelect(selectedTheme) {
     console.log("Tema selecionado:", selectedTheme);
-    localStorage.setItem("selected_theme", selectedTheme);
-    setIsOpen(false);
+    dispatch(setTheme(selectedTheme)); // Atualiza Redux + cookie
     applyTheme(selectedTheme);
+    setIsOpen(false);
   }
 
   const toggleDropdown = () => {
