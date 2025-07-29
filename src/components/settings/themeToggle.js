@@ -6,7 +6,7 @@ import { applyTheme } from "../../utils/themeManager"; // Adjust the import path
 import { useDispatch, useSelector } from "react-redux";
 import { setTheme } from "../../reducers/theme"; // ajuste o path conforme necessário
 
-function Theme(props) {
+function ThemeToggle(props) {
   const { title, lang } = props;
   const [isOpen, setIsOpen] = useState(false);
 
@@ -19,8 +19,7 @@ function Theme(props) {
   const dispatch = useDispatch();
 
   function handleSelect(selectedTheme) {
-    console.log("Tema selecionado:", selectedTheme);
-    dispatch(setTheme(selectedTheme)); // Atualiza Redux + cookie
+    dispatch(setTheme(selectedTheme));
     applyTheme(selectedTheme);
     setIsOpen(false);
   }
@@ -30,9 +29,10 @@ function Theme(props) {
   };
 
   return (
-    <div style={{ margin: "0px 10px" }} className="theme">
+    <div style={{ margin: "0px 16px", height: "25px" }} className="theme">
       <Dropdown show={isOpen} onToggle={setIsOpen}>
         <Dropdown.Toggle
+        style={{ height: "26px" }}
           as={Button}
           className="mybutton button_fullcolor"
           onClick={toggleDropdown}
@@ -48,7 +48,7 @@ function Theme(props) {
                 eventKey={item.id}
                 onClick={() => handleSelect(item.id)}
               >
-                <span>{item.text}</span>
+                <span style={{ fontSize: "13px" }}>{item.text}</span>
               </Dropdown.Item>
             );
           })}
@@ -58,4 +58,4 @@ function Theme(props) {
   );
 }
 
-export default Theme;
+export default ThemeToggle;

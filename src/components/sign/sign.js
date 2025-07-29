@@ -8,7 +8,7 @@ import { Button } from "react-bootstrap";
 import TermsConditions from "../pages/termsConditions/termsConditions";
 import Header from "../partials/header";
 import Language from "../settings/language";
-import Theme from "../settings/themeToggle";
+import ThemeToggle from "../settings/themeToggle";
 import SignIn from "./signIn";
 import SignUp from "./signUp";
 import { changeUser } from "../../reducers/auth";
@@ -218,7 +218,7 @@ function Sign(props) {
                       >
                         <Language title={lang} />
                       </div>
-                      <Theme
+                      <ThemeToggle
                         title={translate({ lang: lang, info: "theme_toggle" })}
                         lang={lang}
                       />

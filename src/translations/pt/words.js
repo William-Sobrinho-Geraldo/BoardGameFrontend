@@ -1,4 +1,4 @@
-import Theme from "../../components/settings/themeToggle";
+import ThemeToggle from "../../components/settings/themeToggle";
 
 var admin_email = "admin@gmail.com";
 var word_bank = {

@@ -10,10 +10,6 @@ import "./css/style.css";
 import Page from "./components/pages/page";
 
 const socket = io();
-// useEffect(() => {
-//   const savedTheme = localStorage.getItem("selected_theme") || "yellow";
-//   applyTheme(savedTheme);
-// }, []);
 
 function App() {
   let my_console = (function () {
